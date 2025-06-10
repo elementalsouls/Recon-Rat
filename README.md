@@ -27,7 +27,7 @@ cd company-domain-finder
 pip install -r requirements.txt
 
 # Make script executable (optional)
-chmod +x halfcode.py
+chmod +x domain-finder.py
 ```
 
 ### API Keys Configuration
@@ -52,42 +52,42 @@ export MISP_API_KEY="your_misp_api_key_here"
 
 ```bash
 # Basic domain discovery
-python halfcode.py example.com
+python domain-finder.py example.com
 
 # With company name for comprehensive discovery
-python halfcode.py example.com --company-name "Example Corporation"
+python domain-finder.py example.com --company-name "Example Corporation"
 
 # Export results to file
-python halfcode.py example.com --output example_report.json
+python domain-finder.py example.com --output example_report.json
 
 # Limit number of subdomains discovered
-python halfcode.py example.com --max-subdomains 100
+python domain-finder.py example.com --max-subdomains 100
 
 # Skip DNS brute force (faster execution)
-python halfcode.py example.com --no-bruteforce
+python domain-finder.py example.com --no-bruteforce
 
 # Verbose output with detailed information
-python halfcode.py example.com --verbose
+python domain-finder.py example.com --verbose
 ```
 
 ### Advanced Usage
 
 ```bash
 # Complete analysis with all options
-python halfcode.py target-company.com \
+python domain-finder.py target-company.com \
   --company-name "Target Company Inc" \
   --output complete_analysis.json \
   --max-subdomains 200 \
   --verbose
 
 # Quick analysis without brute force
-python halfcode.py fastcompany.com \
+python domain-finder.py fastcompany.com \
   --no-bruteforce \
   --max-subdomains 50 \
   --output quick_scan.json
 
 # API connectivity test
-python halfcode.py test.com --test-apis
+python domain-finder.py test.com --test-apis
 ```
 
 ### Command Line Options
@@ -198,17 +198,17 @@ When using `--output`, the tool generates a comprehensive JSON report containing
 
 ### Example 1: Basic Company Analysis
 ```bash
-python halfcode.py microsoft.com --company-name "Microsoft Corporation"
+python domain-finder.py microsoft.com --company-name "Microsoft Corporation"
 ```
 
 ### Example 2: Quick Subdomain Discovery
 ```bash
-python halfcode.py github.com --no-bruteforce --max-subdomains 50
+python domain-finder.py github.com --no-bruteforce --max-subdomains 50
 ```
 
 ### Example 3: Complete Analysis with Export
 ```bash
-python halfcode.py spotify.com \
+python domain-finder.py spotify.com \
   --company-name "Spotify Technology S.A." \
   --output spotify_analysis.json \
   --verbose
@@ -216,7 +216,7 @@ python halfcode.py spotify.com \
 
 ### Example 4: Testing API Connectivity
 ```bash
-python halfcode.py test.com --test-apis
+python domain-finder.py test.com --test-apis
 ```
 
 ## Sample Output
