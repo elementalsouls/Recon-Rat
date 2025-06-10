@@ -20,7 +20,7 @@ A comprehensive Python tool for discovering all domains potentially owned by a c
 ### Setup
 ```bash
 # Clone or download the script
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/elementalsouls/company-domain-finder)
 cd company-domain-finder
 
 # Install dependencies
